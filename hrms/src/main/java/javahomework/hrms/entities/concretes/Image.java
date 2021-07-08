@@ -41,6 +41,6 @@ public class Image {
 
 	@OneToOne(optional = false, fetch = FetchType.LAZY)
 	@JsonIgnore
-	@JoinColumn(name = "job_seeker_id", referencedColumnName = "user_id")
+	@JoinColumn(name = "seeker_id", referencedColumnName = "user_id")
 	private JobSeeker jobSeeker;
 }

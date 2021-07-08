@@ -51,6 +51,6 @@ public class Experience {
 
 	@ManyToOne
 	@JsonIgnore
-	@JoinColumn(name = "job_hunter_id")
+	@JoinColumn(name = "seeker_id")
 	private JobSeeker jobSeeker;
 }

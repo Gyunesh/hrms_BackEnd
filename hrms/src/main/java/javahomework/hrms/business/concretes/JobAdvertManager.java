@@ -14,7 +14,7 @@ import javahomework.hrms.core.utilities.results.SuccessDataResult;
 import javahomework.hrms.core.utilities.results.SuccessResult;
 import javahomework.hrms.dataAccess.abstracts.JobAdvertDao;
 import javahomework.hrms.entities.concretes.JobAdvert;
-import javahomework.hrms.entities.dto.AdvertDto;
+import javahomework.hrms.entities.dto.JobAdvertDto;
 
 @Service
 public class JobAdvertManager implements JobAdvertService {
@@ -75,14 +75,14 @@ public class JobAdvertManager implements JobAdvertService {
 	}
 
 	@Override
-	public DataResult<List<AdvertDto>> getAllDetail() {
+	public DataResult<List<JobAdvertDto>> getAllDetail() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public DataResult<List<AdvertDto>> getAllByActive() {
-		return new SuccessDataResult<List<AdvertDto>>(this.jobAdvertDao.getAdvertDetailByActive());
+	public DataResult<List<JobAdvertDto>> getAllByActive() {
+		return new SuccessDataResult<List<JobAdvertDto>>(this.jobAdvertDao.getAdvertDetailByActive());
 	}
 
 	@Override

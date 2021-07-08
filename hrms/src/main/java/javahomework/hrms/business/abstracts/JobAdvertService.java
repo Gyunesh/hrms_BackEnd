@@ -5,7 +5,7 @@ import java.util.List;
 import javahomework.hrms.core.utilities.results.DataResult;
 import javahomework.hrms.core.utilities.results.Result;
 import javahomework.hrms.entities.concretes.JobAdvert;
-import javahomework.hrms.entities.dto.AdvertDto;
+import javahomework.hrms.entities.dto.JobAdvertDto;
 
 public interface JobAdvertService {
 
@@ -21,9 +21,9 @@ public interface JobAdvertService {
 
 	DataResult<List<JobAdvert>> getAll();
 
-	DataResult<List<AdvertDto>> getAllDetail();
+	DataResult<List<JobAdvertDto>> getAllDetail();
 
-	DataResult<List<AdvertDto>> getAllByActive();
+	DataResult<List<JobAdvertDto>> getAllByActive();
 
 	DataResult<List<JobAdvert>> getAllSortedByDate();
 

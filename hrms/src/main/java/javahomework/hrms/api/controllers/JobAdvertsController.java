@@ -14,7 +14,7 @@ import javahomework.hrms.business.abstracts.JobAdvertService;
 import javahomework.hrms.core.utilities.results.DataResult;
 import javahomework.hrms.core.utilities.results.Result;
 import javahomework.hrms.entities.concretes.JobAdvert;
-import javahomework.hrms.entities.dto.AdvertDto;
+import javahomework.hrms.entities.dto.JobAdvertDto;
 
 @RestController
 @RequestMapping("/api/jobadverts")
@@ -69,12 +69,12 @@ public class JobAdvertsController {
 	}
 
 	@GetMapping("/getallbyactive")
-	public DataResult<List<AdvertDto>> getAllByActive() {
+	public DataResult<List<JobAdvertDto>> getAllByActive() {
 		return this.jobAdvertService.getAllByActive();
 	}
 
 	@GetMapping("/getalldetail")
-	public DataResult<List<AdvertDto>> getAllDetail() {
+	public DataResult<List<JobAdvertDto>> getAllDetail() {
 		return this.jobAdvertService.getAllDetail();
 	}
 }
