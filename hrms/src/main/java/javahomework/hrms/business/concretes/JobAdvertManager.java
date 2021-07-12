@@ -81,8 +81,8 @@ public class JobAdvertManager implements JobAdvertService {
 	}
 
 	@Override
-	public DataResult<List<JobAdvertDto>> getAllByActive() {
-		return new SuccessDataResult<List<JobAdvertDto>>(this.jobAdvertDao.getAdvertDetailByActive());
+	public DataResult<List<JobAdvert>> getByIsActive() {
+		return new SuccessDataResult<List<JobAdvert>>(this.jobAdvertDao.getByIsActive());
 	}
 
 	@Override
@@ -112,6 +112,12 @@ public class JobAdvertManager implements JobAdvertService {
 			return true;
 		}
 		return false;
+	}
+
+	@Override
+	public DataResult<List<JobAdvert>> getAllByEmployerId(int employerId) {
+		// TODO Auto-generated method stub
+		return new SuccessDataResult<List<JobAdvert>>(this.jobAdvertDao.getByEmployer_userId(employerId));
 	}
 
 }

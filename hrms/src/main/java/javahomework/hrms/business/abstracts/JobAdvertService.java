@@ -23,7 +23,7 @@ public interface JobAdvertService {
 
 	DataResult<List<JobAdvertDto>> getAllDetail();
 
-	DataResult<List<JobAdvertDto>> getAllByActive();
+	DataResult<List<JobAdvert>> getByIsActive();
 
 	DataResult<List<JobAdvert>> getAllSortedByDate();
 
@@ -32,5 +32,7 @@ public interface JobAdvertService {
 	DataResult<List<JobAdvert>> findAllByOrderByPublishedAt();
 
 	DataResult<List<JobAdvert>> getAllOpenJobAdvertByEmployer(int id);
+	
+	DataResult<List<JobAdvert>> getAllByEmployerId(int employerId);
 
 }

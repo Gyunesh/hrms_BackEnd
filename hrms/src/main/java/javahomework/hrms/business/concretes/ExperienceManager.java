@@ -40,4 +40,10 @@ public class ExperienceManager implements ExperienceService {
 		return new SuccessDataResult<List<Experience>>(this.experiencedao.findAll(), "exps listed");
 	}
 
+	@Override
+	public DataResult<List<Experience>> getByJobSeekerId(int JobSeekerId) {
+		
+		return new SuccessDataResult<List<Experience>>(this.experiencedao.getByJobSeeker_userId(JobSeekerId));
+	}
+
 }

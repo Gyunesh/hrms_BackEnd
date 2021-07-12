@@ -3,6 +3,7 @@ package javahomework.hrms.api.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,6 +19,7 @@ import javahomework.hrms.entities.dto.JobAdvertDto;
 
 @RestController
 @RequestMapping("/api/jobadverts")
+@CrossOrigin
 public class JobAdvertsController {
 
 	private JobAdvertService jobAdvertService;
@@ -69,8 +71,8 @@ public class JobAdvertsController {
 	}
 
 	@GetMapping("/getallbyactive")
-	public DataResult<List<JobAdvertDto>> getAllByActive() {
-		return this.jobAdvertService.getAllByActive();
+	public DataResult<List<JobAdvert>> getByIsActive() {
+		return this.jobAdvertService.getByIsActive();
 	}
 
 	@GetMapping("/getalldetail")

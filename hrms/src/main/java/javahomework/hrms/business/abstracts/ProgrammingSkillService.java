@@ -11,5 +11,5 @@ public interface ProgrammingSkillService {
 
 	DataResult<List<ProgrammingSkill>> getAll();
 
-	DataResult<List<ProgrammingSkill>> getByJobSeeker(int JobSeekerId);
+	DataResult<List<ProgrammingSkill>> getByJobSeekerId(int JobSeekerId);
 }

@@ -12,4 +12,6 @@ public interface ExperienceService {
 	DataResult<List<Experience>> getByJobSeekerOrderByLeaveDateDesc(int jobSeekerId);
 
 	DataResult<List<Experience>> getAll();
+	
+	DataResult<List<Experience>> getByJobSeekerId(int JobSeekerId);
 }

@@ -40,7 +40,7 @@ public class JobManager implements JobService {
 	}
 
 	private DataResult<Job> jobPositionExist(String jobName) {
-		return new SuccessDataResult<Job>(this.jobDao.findByName(jobName));
+		return new SuccessDataResult<Job>(this.jobDao.findByJobTitle(jobName));
 	}
 
 }

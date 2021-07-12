@@ -8,4 +8,5 @@ import javahomework.hrms.entities.concretes.Experience;
 
 public interface ExperienceDao extends JpaRepository<Experience, Integer> {
 	List<Experience> getByJobSeeker_userIdOrderByLeaveDateDesc(int jobSeekerId);
+	List<Experience> getByJobSeeker_userId(int jobSeekerId);
 }

@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import javahomework.hrms.entities.concretes.ProgrammingSkill;
 
 public interface ProgrammingSkillDao extends JpaRepository<ProgrammingSkill, Integer> {
-	List<ProgrammingSkill> getAllByJobSeeker(int id);
+	List<ProgrammingSkill> getByJobSeeker_userId(int seeker_Id);
 }

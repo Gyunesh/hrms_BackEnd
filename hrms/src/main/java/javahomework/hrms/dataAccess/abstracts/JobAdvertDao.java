@@ -2,11 +2,12 @@ package javahomework.hrms.dataAccess.abstracts;
 
 import java.util.List;
 
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import javahomework.hrms.entities.concretes.JobAdvert;
-import javahomework.hrms.entities.dto.JobAdvertDto;
+
 
 public interface JobAdvertDao extends JpaRepository<JobAdvert, Integer> {
 
@@ -29,4 +30,6 @@ public interface JobAdvertDao extends JpaRepository<JobAdvert, Integer> {
 
 	//@Query("Select new  javahomework.hrms.entities.dto(j.id, e.companyName,j.name,j.openPositionCount,j.publishedAt,j.appDeadline,j.isActive) From Employer e Inner Join e.jobAdvert j Where j.isActive=true ")
 	//List<JobAdvertDto> getAdvertDetailByActive();
+	
+	List<JobAdvert> getByEmployer_userId(int employerId);
 }
